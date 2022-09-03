@@ -1,0 +1,49 @@
+Cписок пользователей: ls /home
+______________________________________________________
+1. СБРОС ПАРОЛЯ
+
+1.0 passwd [username]
+
+1.1. Меню загрузки GRUB (зажать Shift (Esc) при запуске)
+1.2. Advanced options -> Recovery mode -> root
+1.3. ~# (sudo) mount -rw -o remount /
+1.4. ~# passwd [username]
+1.5. Enter new password. And again.
+1.6 ~# reboot || ~# shutdown now
+______________________________________________________
+2. СБРОС ROOT
+
+2.1. Меню загрузки GRUB (зажать Shift (Esc) при запуске)
+2.2. Перейти в настройки опций ядра (Нажать 'Е' в GRUB)
+2.3. В конце строки "linux ..." после "ro" заменить на "rw init=/bin/bash"
+2.4. Сделать 1.4-1.6 с пред.пункта (Если Authentication token manipulation error, то с пунтка 1.3)
+2.5. (Если не получается через reboot, то ввести "exec /sbin/init" для перезапуска)
+______________________________________________________
+3. Cмена пароля через shadow
+
+3.1.  openssl passwd -1 -salt xyz yourpass (
+ makepasswd --clearfrom=- --crypt-md5 <<< YourPass
+ mkpasswd -m sha-512 -S salt -s <<< YourPass
+ perl -e 'print crypt("YourPass", "salt"),"\n"'
+openssl passwd -crypt -salt XRYourPass)
+
+3.2.  sudo vi /etc/shadow
+
+______________________________________________________
+Убрать пароль после выхода из спящего режима (Яркость и блокировка -> заблокировать )
+Убрать пароль при входе в систему (Параметры системы -> Учётные записи -> Разблокировать -> Автоматический вход)
+______________________________________________________
+SeaHorce
+
+/etc/shadow
+/etc/passwd
+ /usr/sbin/pwconv      Для конвертации в формат shadow
+  /usr/sbin/pwunconv    Для конвертации назад в нормальный формат
+______________________________________________________
+
+
+https://wiki.merionet.ru/servernye-resheniya/40/vosstanovlenie-root-parolya-v-ubuntu/
+https://www.opennet.ru/docs/RUS/lame/x822.html
+https://mobile.studbooks.net/2249539/informatika/shifrovanie_paroley_linux
+http://scrollbox.ru/?p=243 через лайв сиди
+
