@@ -1,7 +1,6 @@
 package com.knubisoft.command;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.List;
 
 public class ArgsUtils {
@@ -19,8 +18,10 @@ public class ArgsUtils {
             return false;
         } else {
             for (String arg : args) {
-                if (Arrays.asList(flags).contains(arg)) {
-                    return true;
+                for (String flag : flags) {
+                    if (arg.matches(flag)) {
+                        return true;
+                    }
                 }
             }
         }

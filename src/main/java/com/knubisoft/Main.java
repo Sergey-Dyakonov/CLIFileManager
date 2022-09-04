@@ -1,14 +1,5 @@
 package com.knubisoft;
 
-import com.googlecode.lanterna.TerminalSize;
-import com.googlecode.lanterna.TextCharacter;
-import com.googlecode.lanterna.TextColor;
-import com.googlecode.lanterna.graphics.TextGraphics;
-import com.googlecode.lanterna.input.KeyStroke;
-import com.googlecode.lanterna.input.KeyType;
-import com.googlecode.lanterna.screen.TerminalScreen;
-import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
-import com.googlecode.lanterna.terminal.Terminal;
 import com.knubisoft.command.Command;
 import com.knubisoft.command.Context;
 import lombok.SneakyThrows;
@@ -31,14 +22,15 @@ public class Main {
     //DONE 7. Mkfile
     //DONE 8. Rm file / Rm dir
     //DONE 9. Rm -r -- recursive
-    //TODO 10. LS tree 2/3/4/5 .. n  DEPTH -- view file system as a tree  *** (отредактировано)
+    //DONE 10. LS tree 2/3/4/5 .. n  DEPTH -- view file system as a tree  ***
     -----------------------------
-    //TODO 11. Clear the console
+    //TODO 11. Clear the console (LOOKS LIKE IT'S IMPOSSIBLE FOR CONSOLE IN INTELLIJ IDEA)
     //TODO 12. Detailed description to commands
-    //TODO 13. Add approving of removing. If with flag -f -- then remove without approving
+    //TODO 13. Add approving of removing. If with flag -f (means force) -- then remove without approving
     //TODO 14. Add ability to read file names with spaces (for reading file name with spaces type file name in '' Ex. 'New file')
     //TODO 15. Add ability to read flags in different places
     //TODO 16. ZIP / UNZIP
+    //TODO 17. Write tests
     * */
     @SneakyThrows
     public static void main(String[] args) {

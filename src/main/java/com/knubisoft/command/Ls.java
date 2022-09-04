@@ -20,23 +20,55 @@ public class Ls extends Command {
     @Override
     @SneakyThrows
     public String execute(List<String> args) {
-        //TODO : format output
         File curDir = context.getCurrentDir();
         File[] allFiles = curDir.listFiles();
-        List<String> filesInfo = new ArrayList<>();
-        if (allFiles != null) {
-            for (File file : allFiles) {
-                filesInfo.add(formFileInfo(file));
+        if (ArgsUtils.hasFlags(args, "-\\d+")) {
+            int depth = 1;
+            for (String arg : args) {
+                if (arg.matches("-\\d+")) {
+                    depth = Integer.parseInt(arg.split("-")[1]);
+                    break;
+                }
             }
-            return formatStrings(filesInfo, "NAME" + DELIMETER + "AVAILABLE_SPACE" + DELIMETER + "SIZE" + DELIMETER + "READABLE" + DELIMETER + "WRITABLE" + DELIMETER + "EXTENSION");
+            return getChilds(allFiles, depth);
+        } else {
+            List<String> filesInfo = new ArrayList<>();
+            if (allFiles != null) {
+                for (File file : allFiles) {
+                    filesInfo.add(formFileInfo(file));
+                }
+                return formatStrings(filesInfo, "NAME" + DELIMETER + "AVAILABLE_SPACE" + DELIMETER + "SIZE" + DELIMETER + "READABLE" + DELIMETER + "WRITABLE" + DELIMETER + "EXTENSION");
+            }
         }
         return "";
     }
 
+    private String getChilds(File[] allFiles, int depth) {
+        return getChilds(allFiles, depth, "\t");
+    }
+
+    private String getChilds(File[] allFiles, int depth, String tabs) {
+        if (allFiles == null) return "";
+        StringBuilder res = new StringBuilder();
+        if (depth <= 1) {
+            for (File file : allFiles) {
+                res.append(tabs).append(file.getName()).append("\n");
+            }
+            return res.toString();
+        }
+        for (File file : allFiles) {
+            res.append(tabs).append(file.getName()).append("\n");
+            res.append(getChilds(file.listFiles(), depth-1, tabs + "\t"));
+        }
+        return res.toString();
+    }
+
     private String formatStrings(List<String> filesInfo, String headerString) {
         List<Integer> sizes = new ArrayList<>();
-        filesInfo.set(0, headerString);
-        filesInfo.forEach(file -> sizes.add(0));
+        filesInfo.add(0, headerString);
+        for (String each : headerString.split(DELIMETER)) {
+            sizes.add(0);
+        }
         getMaxColsSizes(filesInfo, sizes);
         reformatStrings(filesInfo, sizes);
         StringBuilder res = new StringBuilder();
