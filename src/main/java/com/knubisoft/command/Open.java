@@ -19,16 +19,9 @@ public class Open extends Command {
         } else {
             try {
                 File file = new File(context.getCurrentDir(), args.get(0));
-                if (!file.exists()) {
-                    return "The file does not exist or cannot be found";
-                }
-                if (!file.canRead()) {
-                    return "Missing permissions. The file cannot be read";
-                }
-                if (file.isDirectory()) {
-                    return "The file is directory. Cannot be opened";
-                }
-                return FileUtils.readFileToString(file, "utf8");
+                if (ArgsUtils.isRWAccessable(file)) {
+                    return FileUtils.readFileToString(file, "utf8") + "\n\n";
+                } else return "";
             } catch (NullPointerException e) {
                 return "The file does not exist";
             }

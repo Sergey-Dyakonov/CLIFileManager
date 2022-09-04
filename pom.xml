@@ -36,6 +36,14 @@
             <version>2.11.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.googlecode.lanterna/lanterna -->
+        <dependency>
+            <groupId>com.googlecode.lanterna</groupId>
+            <artifactId>lanterna</artifactId>
+            <version>3.2.0-alpha1</version>
+        </dependency>
+
+
     </dependencies>
 
     <properties>
