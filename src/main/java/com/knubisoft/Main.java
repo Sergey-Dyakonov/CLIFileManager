@@ -25,7 +25,7 @@ public class Main {
     //DONE 1. View file (TXT) in console
     //DONE 2. Add text to the end of file
     //DONE 3. Add text to specific location **
-    //TODO 4. LS   --  Табличкой выводилось
+    //DONE 4. LS   --  Табличкой выводилось
     //DONE 5.  LS size / r / w / extension -- srwe
     //DONE 6. Mkdir
     //DONE 7. Mkfile
