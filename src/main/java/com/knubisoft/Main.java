@@ -14,10 +14,10 @@ public class Main {
 
     /* FIXME
     //DONE 1. View file (TXT) in console
-    //TODO 2. Add text to the end of file
+    //DONE 2. Add text to the end of file
     //TODO 3. Add text to specific location **
     //TODO 4. LS   --  Табличкой выводилось
-    //TODO 5.  LS size / r / w / extension -- srwe
+    //DONE 5.  LS size / r / w / extension -- srwe
     //DONE 6. Mkdir
     //DONE 7. Mkfile
     //DONE 8. Rm file / Rm dir
@@ -25,10 +25,11 @@ public class Main {
     //TODO 10. LS tree 2/3/4/5 .. n  DEPTH -- view file system as a tree  *** (отредактировано)
     -----------------------------
     //TODO 11. Clear the console
-    //TODO 12. Flags to commands
-    //TODO 13. Detailed description to commands
-    //TODO 14. Add approving of removing. If with flag -f -- then remove without approving
-    //TODO 15. Add ability to read file names with spaces (for reading file name with spaces type file name in '' Ex. 'New file')
+    //TODO 12. Detailed description to commands
+    //TODO 13. Add approving of removing. If with flag -f -- then remove without approving
+    //TODO 14. Add ability to read file names with spaces (for reading file name with spaces type file name in '' Ex. 'New file')
+    //TODO 15. Add ability to read flags in different places
+    //TODO 16. ZIP / UNZIP
     * */
     public static void main(String[] args) {
         Context context = new Context(null, new File(System.getProperty("user.dir")));

@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="515383cc-58fc-4dd2-a4ad-b7d0b9fe8f7f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/ArgsUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Mkdir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Mkfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Rm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Edit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/knubisoft/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Open.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Open.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Ls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/knubisoft/command/Ls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sample.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1662215218490</updated>
       <workItem from="1662215221532" duration="11101000" />
-      <workItem from="1662239519635" duration="7775000" />
+      <workItem from="1662239519635" duration="18473000" />
     </task>
     <task id="LOCAL-00001" summary="Init commit. Retyped template + implemented command 'open', started to work on command 'clean'">
       <created>1662238439031</created>
@@ -93,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662238439031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="rm, rm -r, open, mkdir, mkfile done&#10;ArgsUtils is added">
+      <created>1662247594911</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662247594912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +104,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit. Retyped template + implemented command 'open', started to work on command 'clean'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init commit. Retyped template + implemented command 'open', started to work on command 'clean'" />
+    <MESSAGE value="rm, rm -r, open, mkdir, mkfile done&#10;ArgsUtils is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="rm, rm -r, open, mkdir, mkfile done&#10;ArgsUtils is added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/knubisoft/command/Edit.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

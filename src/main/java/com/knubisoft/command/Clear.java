@@ -18,6 +18,8 @@ public class Clear extends Command {
     @SneakyThrows
     public String execute(List<String> args) {
         //TODO implement
+//        System.out.flush();
+//        System.setOut(new PrintStream(System.out, true));
         return "";
     }
 }
